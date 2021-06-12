@@ -9,13 +9,13 @@ script:
     - docker run -e CI=true chitraca/docker-react1 npm run test
     
 deploy:
-   provider: elasticbeanstalk
-   region:"us-east-1"
-   app: "docker-react1"
-   env: "Dockerreact1-env"
-   bucket_name: "elasticbeanstalk-us-east-1-248679215809"
-   bucket_path: "docker-react1"
-   on:
-     branch: main
-   access_key_id: $ACCESS_KEY
-   secret_access_key: $SECRET_ACCESS_KEY
+    provider: elasticbeanstalk
+    region:"us-east-1"
+    app: "docker-react1"
+    env: "Dockerreact1-env"
+    bucket_name: "elasticbeanstalk-us-east-1-248679215809"
+    bucket_path: "docker-react1"
+    on:
+       branch: main
+    access_key_id: $ACCESS_KEY
+    secret_access_key: "$SECRET_ACCESS_KEY"
